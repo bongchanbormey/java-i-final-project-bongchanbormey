@@ -1,9 +1,42 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/5Dya_UNm)
-Upload your final project files to this repo, commit the necessary changes directly here or clone it to your local machine IDE then push the updated version back the cloud of github. With the second choice, you may need to follow the following steps:
+Store Management System
 
-step 1: accept the lab invitation you received, it will take you to the GitHub Classroom lab.
-step 2: you will see a repository link form the lab assingment page, click on the link to open the respository on GitHub
-step 3: clone the repo to your local manchine alternatively, you can create a new branch in the repo, or close to local machine or create a new branch on github.
-step 4: create of modify the necessary files to complete the lab assingment.
-step 5: after making changes, add, and commit then to your local repo and also push to the remote repo.
+The Store Management System is a Java application designed to streamline the management of a store's inventory and customer orders.
+It offers functionalities for both administrators and customers, allowing efficient management and improved customer experience.
 
+Features:
+
+- Admin Panel:
+  - Login and authentication for administrators.
+  - View, add, update, and delete products in the inventory.
+  - Access and manage customer orders and customer information.
+
+- Customer Dashboard:
+  - User registration and login functionality.
+  - Browse available products in the store.
+  - Place orders, view order history, and generate receipts.
+
+Technologies Used:
+
+- Integrated Development Environment (IDE): IntelliJ IDEA
+- Java
+- JavaFX (for the user interface)
+
+Installation and Setup:
+
+1. Clone the repository:
+   git clone https://github.com/bongchanbormey/java-i-final-project-bongchanbormey.git
+
+2. Instructions for setting up and running the application:
+
+Usage:
+
+- Clone this repository and open it in the IDE of your choice, I ran this in Intellij IDEA.
+- Set up JDK, I used Jdk-20.
+- Make sure you have JavaFX installed for the graphical user interface.
+- You might be prompted to install scene builder kit for the fxml files.
+- Build and run the application.
+
+Credentials
+- Use the following credentials to access the system:
+    - Username (log in as admin): admin
+    - Password: 123
