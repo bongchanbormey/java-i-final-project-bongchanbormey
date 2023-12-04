@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.logincontroller">
+    <children>
+        <ImageView fitHeight="704.0" fitWidth="1392.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@loginBg.jpg" />
+            </image>
+        </ImageView>
+        <BorderPane>
+            <center>
+                <AnchorPane prefHeight="509.0" prefWidth="656.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button layoutX="376.0" layoutY="533.0" mnemonicParsing="false" onAction="#handleregisterbutton" prefHeight="32.0" prefWidth="248.0" style="-fx-background-color: lightblue;" text="Register" />
+                        <Button layoutX="376.0" layoutY="462.0" mnemonicParsing="false" onAction="#handleloginbutton" prefHeight="32.0" prefWidth="248.0" style="-fx-background-color: lightgreen;" text="Login" />
+                        <Label ellipsisString="" layoutX="335.0" layoutY="308.0" prefHeight="35.0" prefWidth="358.0" text="Enter Username and Password to login :" textFill="#b70e0e">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="422.0" layoutY="254.0" prefHeight="54.0" prefWidth="160.0" text="Welcome">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="usernamefield" layoutX="378.0" layoutY="365.0" prefHeight="26.0" prefWidth="247.0" promptText="username" />
+                        <PasswordField fx:id="passwordfield" layoutX="377.0" layoutY="414.0" prefHeight="26.0" prefWidth="246.0" promptText="password" />
+                        <Label layoutX="488.0" layoutY="494.0" prefHeight="36.0" prefWidth="26.0" text="or" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="wronglogin" layoutX="414.0" layoutY="589.0" prefHeight="21.0" prefWidth="176.0" textAlignment="CENTER" />
+                        <Label layoutX="218.0" layoutY="153.0" prefHeight="111.0" prefWidth="593.0" text="Store Management System">
+                            <font>
+                                <Font size="48.0" />
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="62.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@sm-logo.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</StackPane>

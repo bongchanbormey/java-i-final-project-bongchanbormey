@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Adminhomecontroller">
+    <children>
+        <ImageView fitHeight="715.0" fitWidth="1156.0" layoutX="-156.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@loginBg.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="446.0" layoutY="8.0" prefHeight="35.0" prefWidth="286.0" text="Store Management System" textFill="#222121">
+            <font>
+                <Font name="System Italic" size="24.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutY="6.0" prefHeight="704.0" prefWidth="170.0">
+            <children>
+                <HBox layoutY="-10.0" prefHeight="715.0" prefWidth="160.0" style="-fx-background-color: gray;">
+                    <children>
+                        <StackPane prefHeight="736.0" prefWidth="137.0">
+                            <children>
+                                <AnchorPane prefHeight="699.0" prefWidth="137.0">
+                                    <children>
+                                        <Button layoutX="21.0" layoutY="151.0" mnemonicParsing="false" onAction="#onHomebtn" prefHeight="86.0" prefWidth="116.0" style="-fx-background-color: lightblue;" text="Home">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Button>
+                                        <Button layoutX="21.0" layoutY="237.0" mnemonicParsing="false" onAction="#onOrderbtn" prefHeight="81.0" prefWidth="116.0" style="-fx-background-insets: 0,0,-1,0;" text="Order">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Button>
+                                        <Button layoutX="21.0" layoutY="318.0" mnemonicParsing="false" onAction="#onproductbtn" prefHeight="86.0" prefWidth="116.0" style="-fx-background-insets: 0,0,-1,0;" text="Product">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Button>
+                                        <Button layoutX="21.0" layoutY="404.0" mnemonicParsing="false" onAction="#onCustomerbtn" prefHeight="86.0" prefWidth="116.0" style="-fx-background-insets: 0,0,-1,0;" text="Customer">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Button>
+                                        <Button layoutX="39.0" layoutY="636.0" mnemonicParsing="false" onAction="#handleadminlogoutbutton" prefHeight="47.0" prefWidth="80.0" style="-fx-background-color: red;" text="Log out" textFill="#fcf7f7" />
+                                        <Label layoutX="26.0" layoutY="49.0" prefHeight="53.0" prefWidth="105.0" text="Home" textFill="#e4e0e0">
+                                            <font>
+                                                <Font size="36.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </StackPane>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="160.0" layoutY="43.0" prefHeight="660.0" prefWidth="840.0">
+            <children>
+                <AnchorPane layoutX="178.0" layoutY="14.0" prefHeight="135.0" prefWidth="182.0" style="-fx-background-color: grey; -fx-background-radius: 15px;">
+                    <children>
+                        <Label layoutX="7.0" layoutY="14.0" prefHeight="27.0" prefWidth="170.0" text="Number of Customer" textFill="#efecec">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Label>
+                        <Label fx:id="numberOfCustomersLabel" layoutX="145.0" layoutY="85.0" text="0" textFill="#faf5f5">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="508.0" layoutY="14.0" prefHeight="135.0" prefWidth="182.0" style="-fx-background-color: grey; -fx-background-radius: 15px;">
+                    <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="154.0" text="Total Income" textFill="#fffdfd">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Label>
+                        <Label fx:id="totalincome" layoutX="130.0" layoutY="85.0" text="0.0$" textFill="#f7eaea">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutY="156.0" prefHeight="504.0" prefWidth="840.0">
+                    <children>
+                        <AnchorPane layoutX="7.0" layoutY="-1.0" prefHeight="246.0" prefWidth="825.0" style="-fx-background-color: grey;">
+                            <children>
+                                <BarChart fx:id="OrderChart" prefHeight="257.0" prefWidth="825.0" title="Product Stock">
+                                    <xAxis>
+                                        <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis fx:id="yAxis" side="LEFT" />
+                                    </yAxis>
+                                </BarChart>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="7.0" layoutY="273.0" prefHeight="230.0" prefWidth="826.0" style="-fx-background-color: grey;">
+                            <children>
+                                <LineChart fx:id="IncomeChart" layoutX="-6.0" layoutY="1.0" prefHeight="230.0" prefWidth="834.0" title="Income Chart">
+                                    <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                    </yAxis>
+                                </LineChart>
+                            </children>
+                        </AnchorPane>
+                        <Separator layoutX="2.0" layoutY="250.0" prefHeight="35.0" prefWidth="834.0" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,10 @@
+003,Steak,50$,10,500,aa
+001,Coke,1$,5,5,aa
+002,Cake,5$,10,50,aa
+005,Nando,1$,1,1,aa
+003,Steak,50,10,500,aa
+002,Cake,5,5,25,aa
+001,Coke,1,1,1,mey
+003,Steak,50,5,250,mey
+003,Steak,50,10,500,demo
+003,Steak,50,10,500,demo1

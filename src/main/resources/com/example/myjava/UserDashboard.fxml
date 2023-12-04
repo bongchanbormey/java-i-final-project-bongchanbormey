@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserDashboardcontroller">
+    <children>
+        <ImageView fitHeight="846.0" fitWidth="1121.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@loginBg.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="446.0" layoutY="8.0" prefHeight="35.0" prefWidth="286.0" text="Store Management System" textFill="#222121">
+            <font>
+                <Font name="System Italic" size="24.0" />
+            </font>
+        </Label>
+        <HBox prefHeight="700.0" prefWidth="160.0" style="-fx-background-color: gray;">
+            <children>
+                <StackPane prefHeight="700.0" prefWidth="90.0">
+                    <children>
+                        <AnchorPane prefHeight="700.0" prefWidth="98.0">
+                            <children>
+                                <Button layoutX="21.0" layoutY="151.0" mnemonicParsing="false" onAction="#onOrderbtn" prefHeight="86.0" prefWidth="116.0" style="-fx-background-insets: 0,0,-1,0;" text="Order Product">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="21.0" layoutY="323.0" mnemonicParsing="false" onAction="#onhistorybtn" prefHeight="81.0" prefWidth="116.0" style="-fx-background-insets: 0,0,-1,0;" text="History">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="21.0" layoutY="237.0" mnemonicParsing="false" onAction="#onProductbtn" prefHeight="86.0" prefWidth="116.0" style="-fx-background-color: lightblue;" text="Product">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="39.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleuserlogoutbutton" prefHeight="47.0" prefWidth="80.0" style="-fx-background-color: red;" text="Log out" textFill="#fcf7f7" />
+                                <Label fx:id="currentUser" layoutX="24.0" layoutY="48.0" prefHeight="31.0" prefWidth="116.0" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </StackPane>
+            </children>
+        </HBox>
+        <TableView fx:id="productData" layoutX="160.0" layoutY="57.0" prefHeight="432.0" prefWidth="832.0">
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+            <columns>
+                <TableColumn fx:id="ProdId" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="ProdName" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="ProdPrice" prefWidth="128.0" text="Price" />
+                <TableColumn fx:id="ProdCat" prefWidth="132.0" text="Catagory" />
+                <TableColumn fx:id="ProdStock" prefWidth="75.0" text="Stock" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtProdId" layoutX="220.0" layoutY="503.0" prefHeight="31.0" prefWidth="240.0" promptText="ProductID" />
+        <Button layoutX="615.0" layoutY="541.0" mnemonicParsing="false" onAction="#searchOnUserClick" prefHeight="35.0" prefWidth="140.0" text="Search Product" />
+        <TextField fx:id="txtProdName" layoutX="220.0" layoutY="541.0" prefHeight="31.0" prefWidth="240.0" promptText="ProductName" />
+        <TextField fx:id="txtProdPrice" layoutX="220.0" layoutY="580.0" prefHeight="31.0" prefWidth="240.0" promptText="ProductPrice" />
+        <TextField fx:id="txtProdCat" layoutX="220.0" layoutY="619.0" prefHeight="31.0" prefWidth="240.0" promptText="ProductCatagory" />
+        <TextField fx:id="txtProdStock" layoutX="220.0" layoutY="655.0" prefHeight="31.0" prefWidth="240.0" promptText="ProductStock" />
+        <Button layoutX="475.0" layoutY="541.0" mnemonicParsing="false" onAction="#displayuserTable" prefHeight="35.0" prefWidth="140.0" text="Show All Product" />
+        <Label fx:id="text" layoutX="511.0" layoutY="655.0" prefHeight="21.0" prefWidth="214.0" textAlignment="CENTER" />
+        <ImageView fitHeight="59.0" fitWidth="137.0" layoutX="160.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@sm-logo-admin.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

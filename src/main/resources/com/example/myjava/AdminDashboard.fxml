@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashboardcontroller">
+    <children>
+        <Label layoutX="446.0" layoutY="8.0" prefHeight="35.0" prefWidth="286.0" text="Store Management System" textFill="#365ccd">
+            <font>
+                <Font name="System Italic" size="24.0" />
+            </font>
+        </Label>
+        <HBox prefHeight="700.0" prefWidth="160.0" style="-fx-background-color: gray;">
+            <children>
+                <StackPane prefHeight="700.0" prefWidth="90.0">
+                    <children>
+                        <AnchorPane prefHeight="700.0" prefWidth="98.0">
+                            <children>
+                                <Button layoutX="21.0" layoutY="151.0" mnemonicParsing="false" onAction="#onHomebtn" prefHeight="86.0" prefWidth="116.0" style="-fx-background-insets: 0,0,-1,0;" text="Home">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="21.0" layoutY="237.0" mnemonicParsing="false" onAction="#onOrderbtn" prefHeight="81.0" prefWidth="116.0" style="-fx-background-insets: 0,0,-1,0;" text="Order">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="21.0" layoutY="318.0" mnemonicParsing="false" onAction="#onproductbtn" prefHeight="86.0" prefWidth="116.0" style="-fx-background-color: lightblue;" text="Product">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="21.0" layoutY="404.0" mnemonicParsing="false" onAction="#onCustomerbtn" prefHeight="86.0" prefWidth="116.0" style="-fx-background-insets: 0,0,-1,0;" text="Customer">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="39.0" layoutY="537.0" mnemonicParsing="false" onAction="#handleadminlogoutbutton" prefHeight="47.0" prefWidth="80.0" style="-fx-background-color: red;" text="Log out" textFill="#fcf7f7" />
+                                <Label alignment="CENTER" layoutX="9.0" layoutY="49.0" prefHeight="54.0" prefWidth="126.0" text="Product" textFill="WHITE">
+                                    <font>
+                                        <Font size="36.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </StackPane>
+            </children>
+        </HBox>
+        <TableView fx:id="productData" layoutX="160.0" layoutY="57.0" prefHeight="432.0" prefWidth="829.0">
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+            <columns>
+                <TableColumn fx:id="ProdId" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="ProdName" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="ProdPrice" prefWidth="128.0" text="Price" />
+                <TableColumn fx:id="ProdCat" prefWidth="132.0" text="Catagory" />
+                <TableColumn fx:id="ProdStock" prefWidth="75.0" text="Stock" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtProdId" layoutX="220.0" layoutY="503.0" prefHeight="31.0" prefWidth="226.0" promptText="ProductID" />
+        <Button fx:id="btnsearchProd" layoutX="662.0" layoutY="503.0" mnemonicParsing="false" onAction="#searchOnClick" text="Search Product" />
+        <Button fx:id="btndeleteProd" layoutX="663.0" layoutY="549.0" mnemonicParsing="false" onAction="#removeonClick" text="Delete Product" />
+        <TextField fx:id="txtProdName" layoutX="220.0" layoutY="541.0" prefHeight="31.0" prefWidth="226.0" promptText="ProductName" />
+        <TextField fx:id="txtProdPrice" layoutX="220.0" layoutY="580.0" prefHeight="31.0" prefWidth="226.0" promptText="ProductPrice" />
+        <TextField fx:id="txtProdCat" layoutX="220.0" layoutY="619.0" prefHeight="31.0" prefWidth="226.0" promptText="ProductCatagory" />
+        <TextField fx:id="txtProdStock" layoutX="220.0" layoutY="655.0" prefHeight="31.0" prefWidth="226.0" promptText="ProductStock" />
+        <Button fx:id="btnaddProd" layoutX="512.0" layoutY="503.0" mnemonicParsing="false" onAction="#addOnClick" prefHeight="31.0" prefWidth="125.0" text="Add Product" />
+        <Button fx:id="btnupdateProd" layoutX="512.0" layoutY="549.0" mnemonicParsing="false" onAction="#updateOnClick" text="Update Product" />
+        <Button fx:id="btnshowProd" layoutX="583.0" layoutY="596.0" mnemonicParsing="false" onAction="#displayTable" text="Show All Product" />
+        <Label fx:id="text" layoutX="476.0" layoutY="660.0" prefHeight="21.0" prefWidth="306.0" textAlignment="CENTER" />
+    </children>
+</AnchorPane>

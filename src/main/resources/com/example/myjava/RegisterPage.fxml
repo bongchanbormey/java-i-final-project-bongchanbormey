@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.registercontroller">
+    <children>
+        <ImageView fitHeight="717.0" fitWidth="1308.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@loginBg.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane prefHeight="684.0" prefWidth="791.0">
+            <children>
+                <Label layoutX="420.0" layoutY="169.0" prefHeight="53.0" prefWidth="160.0" text="Welcome">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <Label layoutX="315.0" layoutY="222.0" prefHeight="38.0" prefWidth="370.0" text="Enter your detail below to create an account" textFill="#ae1d1d">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="fullnameField" layoutX="377.0" layoutY="260.0" prefHeight="26.0" prefWidth="247.0" promptText="Fullname" />
+                <TextField fx:id="emailField" layoutX="377.0" layoutY="335.0" prefHeight="26.0" prefWidth="247.0" promptText="email" />
+                <TextField fx:id="usernameField" layoutX="377.0" layoutY="298.0" prefHeight="26.0" prefWidth="247.0" promptText="username" />
+                <PasswordField fx:id="passwordField" layoutX="377.0" layoutY="377.0" prefHeight="26.0" prefWidth="247.0" promptText="password" />
+                <PasswordField fx:id="confirmPasswordField" layoutX="377.0" layoutY="416.0" prefHeight="26.0" prefWidth="247.0" promptText="confirm password" />
+                <Button layoutX="376.0" layoutY="462.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: lightblue;" text="Create" />
+                <Label layoutX="488.0" layoutY="497.0" prefHeight="36.0" prefWidth="26.0" text="or">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Button layoutX="377.0" layoutY="533.0" mnemonicParsing="false" onAction="#handleloginbutton2" prefHeight="35.0" prefWidth="248.0" style="-fx-background-color: lightgreen;" text="login" />
+                <ImageView fitHeight="46.0" fitWidth="207.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@sm-logo.png" />
+                    </image>
+                </ImageView>
+
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

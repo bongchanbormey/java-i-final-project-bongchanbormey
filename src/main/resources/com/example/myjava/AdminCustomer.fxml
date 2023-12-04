@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.adminCustomersController">
+    <children>
+        <ImageView fitHeight="48.0" fitWidth="200.0" layoutY="652.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@sm-logo-admin.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="772.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@loginBg.jpg" />
+            </image>
+        </ImageView>
+        <StackPane fx:id="customersContent" maxWidth="1000.0" prefHeight="700.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <BorderPane prefHeight="535.0" prefWidth="618.0">
+                    <padding>
+                        <Insets left="30.0" right="30.0" />
+                    </padding>
+                    <top>
+                        <GridPane alignment="CENTER_RIGHT" BorderPane.alignment="CENTER_RIGHT">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="540.9999694824219" minWidth="10.0" prefWidth="540.9999694824219" />
+                                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="465.0" minWidth="10.0" prefWidth="399.0000305175781" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <BorderPane.margin>
+                                <Insets top="20.0" />
+                            </BorderPane.margin>
+                            <children>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <TextField fx:id="txtusername" layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="291.0" promptText="search by username " />
+                                        <Button layoutX="300.0" layoutY="2.0" mnemonicParsing="false" onAction="#searchonclick" prefHeight="26.0" style="-fx-background-color: blue;" text="Search" textFill="#fffefe" />
+                                        <Button fx:id="deletebutton" layoutX="477.0" layoutY="1.0" mnemonicParsing="false" onAction="#deletebuttononaction" style="-fx-background-color: red;" text="Delete" textFill="#fcf8f8" />
+                                        <Button layoutX="375.0" layoutY="1.0" mnemonicParsing="false" onAction="#showuser" style="-fx-background-color: Green;" text="Show  User" textFill="WHITE" />
+                                    </children>
+                                </AnchorPane>
+                                <Button mnemonicParsing="false" onAction="#gobackbutton" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: blue;" text="Back" textFill="#f2eded" GridPane.columnIndex="1" />
+                            </children>
+                        </GridPane>
+                    </top>
+                    <center>
+                        <TableView fx:id="tableCustomersPage" editable="true" prefHeight="592.0" prefWidth="855.0">
+                            <columns>
+                                <TableColumn fx:id="nameSurnameCo" prefWidth="75.0" text="Name/Surname">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="fullname" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn fx:id="emailCo" prefWidth="271.0" text="Email">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="email" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn fx:id="usernameCo" prefWidth="198.0" text="Username">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="username" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn fx:id="orderCo" prefWidth="176.0" text="Orders">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="orders" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                            <BorderPane.margin>
+                                <Insets top="10.0" />
+                            </BorderPane.margin>
+                        </TableView>
+                    </center>
+                    <bottom>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="1220.0" spacing="10.0" BorderPane.alignment="CENTER">
+                        </HBox>
+                    </bottom>
+                </BorderPane>
+            </children>
+        </StackPane>
+    </children>
+
+</AnchorPane>
