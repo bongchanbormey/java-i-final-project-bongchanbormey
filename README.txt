@@ -1,7 +1,6 @@
 Store Management System
 
-The Store Management System is a Java application designed to streamline the management of a store's inventory and customer orders.
-It offers functionalities for both administrators and customers, allowing efficient management and improved customer experience.
+The Store Management System is a Java application designed to streamline the management of a store's inventory and customer orders. It offers functionalities for both administrators and customers, allowing efficient management and improved customer experience.
 
 Features:
 
